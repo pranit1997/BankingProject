@@ -1,10 +1,10 @@
-package com.inetbanking.testCases;
+package com.inetbanking.testcases;
 
 import com.inetbanking.pageObjects.LoginPage;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class TC_LoginTest_001 extends BaseClass {
+public class TC_LoginTest_001 extends com.inetbanking.testcases.BaseClass {
 @Test
     public void loginTest()
     {

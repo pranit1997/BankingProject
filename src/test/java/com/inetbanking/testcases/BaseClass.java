@@ -1,4 +1,4 @@
-package com.inetbanking.testCases;
+package com.inetbanking.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ public class BaseClass {
     @BeforeClass
     public void setup()
     {
-     System.setProperty("webdriver.chrome.driver" , "C:\\Users\\prani\\IdeaProjects\\BankingProject\\src\\test\\resources\\Drivers\\chromedriver.exe");
+     System.setProperty("webdriver.chrome.driver" ,"C:\\chromedriver.exe");
    driver = new ChromeDriver();
     }
 @AfterClass
