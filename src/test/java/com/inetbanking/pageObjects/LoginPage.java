@@ -9,9 +9,9 @@ import org.testng.util.Strings;
 
 public class LoginPage {
                  WebDriver ldriver;
-                 LoginPage(WebDriver rdriver)
+                 public LoginPage(WebDriver rdriver)
                  {ldriver=rdriver;
-                     PageFactory.initElements(ldriver ,this);
+                     PageFactory.initElements(rdriver ,this);
                  }//without this driver will not awake
     @FindBy(name ="uid")
     @CacheLookup
