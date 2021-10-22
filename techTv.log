@@ -1,0 +1,1 @@
+DEBUG [PoolThreadCache.java:224] - Freed 4 thread-local buffer(s) from thread: AsyncHttpClient-1-4

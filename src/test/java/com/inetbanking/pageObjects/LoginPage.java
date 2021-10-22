@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-                 WebDriver ldriver;
-                 public LoginPage(WebDriver rdriver)
+                 WebDriver ldriver;//web driver object l= local
+                 public LoginPage(WebDriver rdriver) //webdriver as a parameter r = remote
                  {ldriver=rdriver;
                      PageFactory.initElements(rdriver ,this);
                  }//without this driver will not awake
@@ -34,10 +34,4 @@ public class LoginPage {
     {
         btnLogin.click();
     }
-
-
-
-
-
-
 }
