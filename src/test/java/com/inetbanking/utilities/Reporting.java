@@ -29,6 +29,19 @@ public class Reporting extends TestListenerAdapter
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); // Time stamp
         String repName = "Test-Report" + timestamp + ".html";
         htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/"+repName);
+        try {
+            htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+        extent.setSystemInfo("Hostname", "Local");
+        extent.setSystemInfo("OS", "Windows10");
+        extent.setSystemInfo("Tester", "Pranit");
+        extent.setSystemInfo("Browser", "Chrome");
+
+
         htmlReporter.config().setDocumentTitle("Banking Project 1.0 Report");//Title of the report
         htmlReporter.config().setReportName("Functional Banking Project Report");//Name of the report
         htmlReporter.config().setTheme(Theme.STANDARD);}

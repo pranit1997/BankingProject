@@ -27,9 +27,9 @@ public class BaseClass {
             System.setProperty("webdriver.chrome.driver", readConfig.Chromepath());
             driver = new ChromeDriver();
         }
-        else if (br.equals("firefox"));
-        System.setProperty("webdriver.firefox.marionette", readConfig.Firefox());
-        driver = new FirefoxDriver();
+       // else if (br.equals("firefox"));
+        //System.setProperty("webdriver.firefox.marionette", readConfig.Firefox());
+        //driver = new FirefoxDriver();
         // Logger logger = Logger.getLogger(BaseClass.class);
         //  PropertyConfigurator.configure("Log4j.properties");
     }
