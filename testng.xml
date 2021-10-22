@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Academy/IdeaProjects/BankingProject1.0">
+        <parameter name="browser" value="firefox">
         <classes>
             <class name="com.inetbanking.testcases.TC_LoginTest_001">
                 <methods>
@@ -9,5 +10,6 @@
                 </methods>
             </class>
         </classes>
+        </parameter>
     </test>
 </suite>

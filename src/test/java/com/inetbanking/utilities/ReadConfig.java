@@ -8,7 +8,7 @@ public class ReadConfig {
     Properties pro;  // Object for property class
 
     public ReadConfig() {
-        File src = new File("./Configuration/config.properties"); // Create object for file
+        File src = new File("src/test/resources/Configuration/config.properties"); // Create object for file
         try {
             FileInputStream fis = new FileInputStream(src);  //Import file and read data we use file inputstream
             pro = new Properties();
@@ -40,7 +40,7 @@ public String ApplicationURL()
     }
     public String Firefox()
     {
-        String firefox = pro.getProperty("firefoxpath");
-        return firefox;
+        String firefoxpath = pro.getProperty("firefoxpath");
+        return firefoxpath;
     }
 }
