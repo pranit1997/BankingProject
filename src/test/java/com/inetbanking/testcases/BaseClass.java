@@ -1,5 +1,6 @@
 package com.inetbanking.testcases;
 
+import com.inetbanking.utilities.ReadConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -9,15 +10,17 @@ import java.io.IOException;
 
 
 public class BaseClass {
-    public String baseurl = "http://demo.guru99.com/V1/index.php";
-    public String username = "mngr360344";
-    public String password = "zApurYt";
+    ReadConfig readConfig = new ReadConfig(); // Create object for Readconfig and import package
+    //change variable name with methods readconfig.variable
+    public String baseurl = readConfig.ApplicationURL();
+    public String username = readConfig.Username();
+    public String password = readConfig.Password();
     public static WebDriver driver;
 
     //public static Logger logger;
     @BeforeClass
     public void setup() throws IOException {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", readConfig.Chromepath());
         driver = new ChromeDriver();
 
 
