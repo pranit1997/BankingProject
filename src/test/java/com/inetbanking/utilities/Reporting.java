@@ -54,7 +54,7 @@ public void onTestFailure(ITestResult tr) {
     test = extent.createTest(tr.getName()); //Create new entry in the report
     test.log(Status.FAIL , MarkupHelper.createLabel(tr.getName(), ExtentColor.BLACK )); //Send pass information
 
-    String ScreenShotpath = System.getProperty("user.dir") + "/Screenshots/" +tr.getName()  + ".png";
+    String ScreenShotpath = System.getProperty("src/test/resources/Screenshot/" +tr.getName()  + ".png");
 File f = new File(ScreenShotpath);
 if (f.exists())
 {

@@ -4,9 +4,11 @@ import com.inetbanking.pageObjects.LoginPage;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class TC_LoginTest_001 extends com.inetbanking.testcases.BaseClass {
     @Test
-    public void loginTest() {
+    public void loginTest() throws IOException {
         driver.get(baseurl);
 
 //logger.info("url is opened");
@@ -16,10 +18,11 @@ public class TC_LoginTest_001 extends com.inetbanking.testcases.BaseClass {
         lp.setPassword(password);
         // logger.info("Entered password");
         lp.Clicksubmit();
-        if (driver.getTitle().equals("GTPL Bank Manager HomePage")) {
+        if (driver.getTitle().equals("GTPL Bank Manager HomePages")) {
             Assert.assertTrue(true);
             //   logger.info("Login Test Passed");
         } else {
+            captureScreen(driver, "login test");
             Assert.assertTrue(false);
             //logger.info("Login Test Failed");}
 
