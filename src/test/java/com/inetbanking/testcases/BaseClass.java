@@ -13,6 +13,7 @@ import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 public class BaseClass {
@@ -30,6 +31,9 @@ public class BaseClass {
         if (br.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", readConfig.Chromepath());
             driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().window().maximize();
+            driver.get(baseurl);
         }
        // else if (br.equals("firefox"));
         //System.setProperty("webdriver.firefox.marionette", readConfig.Firefox());
@@ -41,7 +45,7 @@ public class BaseClass {
     @AfterClass
     public void teardown() {
         driver.quit();
-    }
+     }
 public void captureScreen(WebDriver driver , String tname) throws IOException{
     TakesScreenshot ts = (TakesScreenshot) driver;
     File Source = ts.getScreenshotAs(OutputType.FILE);

@@ -18,7 +18,7 @@ public class TC_LoginTest_001 extends com.inetbanking.testcases.BaseClass {
         lp.setPassword(password);
         // logger.info("Entered password");
         lp.Clicksubmit();
-        if (driver.getTitle().equals("GTPL Bank Manager HomePages")) {
+        if (driver.getTitle().equals("GTPL Bank Manager HomePage")) {
             Assert.assertTrue(true);
             //   logger.info("Login Test Passed");
         } else {

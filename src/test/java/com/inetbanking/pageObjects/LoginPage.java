@@ -7,12 +7,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-                 WebDriver ldriver;//web driver object l= local
-                 public LoginPage(WebDriver rdriver) //webdriver as a parameter r = remote
-                 {ldriver=rdriver;
-                     PageFactory.initElements(rdriver ,this);
-                 }//without this driver will not awake
-    @FindBy(name ="uid")
+    WebDriver ldriver;//web driver object l= local
+
+    public LoginPage(WebDriver rdriver) //webdriver as a parameter r = remote
+    {
+        ldriver = rdriver;
+        PageFactory.initElements(rdriver, this);
+    }//without this driver will not awake
+
+    @FindBy(name = "uid")
     @CacheLookup
     WebElement txtUsername;
     @FindBy(name = "password")
@@ -22,16 +25,30 @@ public class LoginPage {
     @CacheLookup
     WebElement btnLogin;
 
+    @FindBy(xpath = "//a[normalize-space()='Log out']")
+    WebElement btnlogout;
+
     public void setUsername(String uname)
     {
         txtUsername.sendKeys(uname);
     }
+
     public void setPassword(String pwd)
     {
         txtpassword.sendKeys(pwd);
     }
+
     public void Clicksubmit()
     {
         btnLogin.click();
     }
+public void  clicklogout()
+{
+    btnlogout.click();
 }
+
+
+}
+
+
+

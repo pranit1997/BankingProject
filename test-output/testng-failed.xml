@@ -7,13 +7,13 @@
   <test thread-count="5" name="C:/Users/Academy/IdeaProjects/BankingProject1.0(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.inetbanking.testcases.TC_LoginTest_001">
+      <class name="com.inetbanking.testcases.TC_LoginDDT_002">
         <methods>
-          <include name="loginTest"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="loginDDT"/>
         </methods>
-      </class> <!-- com.inetbanking.testcases.TC_LoginTest_001 -->
+      </class> <!-- com.inetbanking.testcases.TC_LoginDDT_002 -->
     </classes>
   </test> <!-- C:/Users/Academy/IdeaProjects/BankingProject1.0(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
