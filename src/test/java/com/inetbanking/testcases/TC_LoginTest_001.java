@@ -25,6 +25,7 @@ public class TC_LoginTest_001 extends com.inetbanking.testcases.BaseClass {
             captureScreen(driver, "login test");
             Assert.assertTrue(false);
             //logger.info("Login Test Failed");}
+            lp.clicklogout();
 
         }
     }
