@@ -7,7 +7,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/Academy/IdeaProjects/BankingProject1.0">
         <parameter name="browser" value="chrome">
         <classes>
-            <!--   <class name="com.inetbanking.testcases.TC_LoginTest_001"/>-->
+               <class name="com.inetbanking.testcases.TC_LoginTest_001"/>
                   <!-- <class name="com.inetbanking.testcases.TC_LoginDDT_002"/>-->
             <class name="com.inetbanking.testcases.TC_AddcustomerPage_3">
                  <methods>
